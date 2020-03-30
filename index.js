@@ -21,6 +21,10 @@ const upload = multer({
   dest: publicRoot
 });
 
+router.get('/', (ctx) => {
+  ctx.body = "Hello there!";
+});
+
 router.post('/share', async (ctx, next) => {
   if (ctx.query.secret != config.secret) {
     ctx.throw(403);
