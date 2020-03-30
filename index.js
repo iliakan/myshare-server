@@ -64,4 +64,4 @@ app.use(require('koa-static')(publicRoot));
 app.use(require('koa-bodyparser')());
 app.use(router.routes());
 
-app.listen(process.env.PORT || config.port || 80);
+app.listen(process.env.PORT || config.port || 80, process.env.HOST || config.host || '0.0.0.0');
