@@ -18,7 +18,10 @@ const publicRoot = path.resolve(__dirname, 'public');
 
 const router = new Router();
 const upload = multer({
-  dest: publicRoot
+  dest: publicRoot,
+  limits: {
+    fileSize: 10*1024*1024*1024
+  }
 });
 
 router.get('/', (ctx) => {
