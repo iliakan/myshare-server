@@ -3,8 +3,13 @@
     {
       "name": "myshare",
       "script": "index.js",
+      "vizion": false,
+      "pmx": false,
       "exec_mode": "cluster",
       "instances": 1,
+      "error": "/var/log/node/myshare.err.log",
+      "output": "/var/log/node/myshare.out.log",
+      "log": "/var/log/node/myshare.log",
       "env": {
         "PORT": 80,
         "HOST": "0.0.0.0"
