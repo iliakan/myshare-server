@@ -1,0 +1,14 @@
+{
+  "apps": [
+    {
+      "name": "myshare",
+      "script": "index.js",
+      "exec_mode": "cluster",
+      "instances": 1,
+      "env": {
+        "PORT": 80,
+        "HOST": "0.0.0.0"
+      }
+    }
+  ]
+}
