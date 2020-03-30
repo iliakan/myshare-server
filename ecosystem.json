@@ -12,7 +12,7 @@
       "log": "/var/log/node/myshare.log",
       "env": {
         "PORT": 80,
-        "HOST": "0.0.0.0"
+        "HOST": "::"
       }
     }
   ]
