@@ -47,10 +47,10 @@ router.post('/share', async (ctx, next) => {
     }
   }
   fs.moveSync(ctx.file.path, preferrablePath);
-  console.log('ctx.request.file', ctx.request.file);
-  console.log('ctx.file', ctx.file);
-  console.log('ctx.request.body', ctx.request.body);
-  ctx.body = new URL('/' + path.basename(preferrablePath), config.server);
+  // console.log('ctx.request.file', ctx.request.file);
+  // console.log('ctx.file', ctx.file);
+  // console.log('ctx.request.body', ctx.request.body);
+  ctx.body = new URL('/' + path.basename(preferrablePath), config.server).href;
 });
 
 app.use(require('koa-static')(publicRoot));
